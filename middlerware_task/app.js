@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const {keypair,auth}=require('./middleware/middleware')
+const {keypair,auth}=require('./middlerware')
 
 // // app.use(auth)
 
@@ -13,8 +13,8 @@ app.get("/", keypair,(req,res)=>{
 
 app.get("/user", auth,(req,res)=>{
     let secret={
-        username:"Mahad",
-        secret:"secrets"
+        username:"vikash",
+        secret:"qwertyui"
     }
     res.send(secret);
 })

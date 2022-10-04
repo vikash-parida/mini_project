@@ -1,8 +1,7 @@
 function auth(req,res,next){
     const{id}=req.query;
-    if (parseInt(id)===1) {
-        next();
-        return;         
+    if (parseInt(id) === 1) {
+        next();         
     }
      res.send("access denied");
      throw new Error("access denied");
